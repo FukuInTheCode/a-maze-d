@@ -24,6 +24,7 @@ typedef struct room_s {
     int y;
     bool has_resident;
     bool visited;
+    room_type_t type;
     struct room_s **connected_rooms;
     struct room_s *next;
 } room_t;
