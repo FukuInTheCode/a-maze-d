@@ -36,4 +36,3 @@ size_t my_strlen(char const *);
 int get_user_input(void);
 int remove_comment(char *);
 char **add_to_list(char *, char **);
-

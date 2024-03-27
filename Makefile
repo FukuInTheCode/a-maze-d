@@ -23,7 +23,7 @@ $(NAME):	$(OBJ)
 
 obj/%.o: src/%.c
 		@mkdir -p $(dir $@)
-		@$(CC) -c -o $@ $< $(FLAGS) 
+		@$(CC) -c -o $@ $< $(FLAGS)
 
 clean:
 		@rm -rf obj
