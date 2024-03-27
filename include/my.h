@@ -27,6 +27,8 @@ int robot_set_next(robot_t *, robot_t *);
 
 void *my_memset(char *, char, size_t);
 char *my_strtok(char *, char const *);
-
+char **my_str_to_word_array(char const *, char const *);
+int my_free_word_array(char **);
+size_t my_len_word_array(char **);
 
 
