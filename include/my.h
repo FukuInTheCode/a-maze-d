@@ -10,8 +10,8 @@
     #include <unistd.h>
     #include <stdlib.h>
     #include <stdio.h>
-    #include <stdbool.h>
     #include <stddef.h>
+    #include <stdbool.h>
 
 typedef struct robot_s {
     int id;
@@ -33,4 +33,7 @@ size_t my_len_word_array(char **);
 char *my_strdup(char const *);
 size_t my_strlen(char const *);
 
+int get_user_input(void);
+int remove_comment(char *);
+char **add_to_list(char *, char **);
 
