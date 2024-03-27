@@ -22,7 +22,7 @@ int get_user_input(void)
     size_t size = 0;
 
     list[0] = NULL;
-    while(true) {
+    while (true) {
         if (getline(&input, &size, stdin) == -1)
             break;
         remove_comment(input);
