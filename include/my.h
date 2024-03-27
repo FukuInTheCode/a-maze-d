@@ -11,6 +11,7 @@
     #include <stdlib.h>
     #include <stdio.h>
     #include <stdbool.h>
+    #include <stddef.h>
 
 typedef struct robot_s {
     int id;
@@ -23,5 +24,7 @@ int robot_destroy(robot_t *);
 int robot_set_id(robot_t *, int);
 int robot_set_status(robot_t *, bool);
 int robot_set_next(robot_t *, robot_t *);
+
+void *my_memset(char *, char, size_t);
 
 
