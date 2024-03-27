@@ -18,14 +18,16 @@ int get_size_input(char *input)
 int get_user_input(void)
 {
     char *input = NULL;
+    char **list = malloc(sizeof(char *));
     size_t size = 0;
 
+    list[0] = NULL;
     while(true) {
         if (getline(&input, &size, stdin) == -1)
             break;
         remove_comment(input);
         if (get_size_input(input) != 0)
-            add_to_list();
+            add_to_list(input, list);
     }
     return 0;
 }
