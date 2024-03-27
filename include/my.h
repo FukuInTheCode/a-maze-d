@@ -6,7 +6,9 @@
 */
 
 #pragma once
-    #define MYSH_H
+    #define MY_H
     #include <unistd.h>
     #include <stdlib.h>
     #include <stdio.h>
+
+
