@@ -26,5 +26,7 @@ int robot_set_status(robot_t *, bool);
 int robot_set_next(robot_t *, robot_t *);
 
 void *my_memset(char *, char, size_t);
+char *my_strtok(char *, char const *);
+
 
 
