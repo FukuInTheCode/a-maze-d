@@ -7,7 +7,7 @@
 
 #include "my.h"
 
-int get_size_input(char *input)
+static int get_size_input(char const *input)
 {
     int len = 0;
 
