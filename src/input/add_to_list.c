@@ -18,10 +18,14 @@ static size_t get_len_list(char **list)
 char **add_to_list(char *input, char **list)
 {
     size_t len_list = get_len_list(list);
+    int i = 0;
     char **new_list = malloc(sizeof(len_list + 1));
 
-
-
+    for (i = 0; list[i] != NULL; i++) {
+        new_list[i] = list[i];
+    }
+    new_list[i] = my_strdup(input);
+    new_list[i + 1] = NULL;
     free(list);
     return new_list;
 }
