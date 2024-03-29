@@ -19,7 +19,7 @@ char **add_to_list(char *input, char **list)
 {
     size_t len_list = get_len_list(list);
     int i = 0;
-    char **new_list = malloc(sizeof(char*) * (len_list + 2));
+    char **new_list = malloc(sizeof(char *) * (len_list + 2));
 
     if (!new_list)
         return NULL;
