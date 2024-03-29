@@ -41,3 +41,4 @@ int remove_comment(char *);
 char **add_to_list(char *, char **);
 
 int create_robot(char **);
+int display_nbr_robots(int);
