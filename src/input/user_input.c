@@ -27,7 +27,9 @@ int get_user_input(void)
             break;
         remove_comment(input);
         if (get_size_input(input) != 0)
-            add_to_list(input, list);
+            list = add_to_list(input, list);
     }
+    if (create_robot(list) == 84)
+        return 84;
     return 0;
 }
