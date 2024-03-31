@@ -45,3 +45,5 @@ room_t *room_get(room_t *, char const *);
 room_t **room_array_create(void);
 int room_array_destroy(room_t **);
 room_t **room_array_add(room_t **, room_t *);
+
+int my_strcmp(char const *, char const *);
