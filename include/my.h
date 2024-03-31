@@ -31,7 +31,7 @@ typedef struct room_s {
 
 room_t *room_create(void);
 int room_destroy(room_t *);
-int room_set_name(room_t *, char *name);
+int room_set_name(room_t *, char const *);
 int room_set_pos(room_t *, int, int);
 int room_set_resident(room_t *, bool);
 int room_set_visited(room_t *, bool);
