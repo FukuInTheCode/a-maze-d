@@ -19,11 +19,11 @@ OBJ = $(SRC:src/%.c=obj/%.o)
 all: $(NAME)
 
 $(NAME):	$(OBJ)
-			 $(CC) $(FLAGS) -o $(NAME) $(OBJ) -g
+			 $(CC) $(FLAGS) -o $(NAME) $(OBJ)
 
 obj/%.o: src/%.c
 		@mkdir -p $(dir $@)
-		@$(CC) -c -o $@ $< $(FLAGS) -g
+		@$(CC) -c -o $@ $< $(FLAGS)
 
 clean:
 		@rm -rf obj

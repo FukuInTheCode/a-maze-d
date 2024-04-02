@@ -9,5 +9,7 @@
 
 int main(int argc, char **argv, char **envp)
 {
-    return 84;
+    if (argc != 1)
+        return 84;
+    return get_user_input();
 }
