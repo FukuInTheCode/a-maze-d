@@ -61,6 +61,7 @@ typedef struct robot_s {
 
 robot_t *robot_create(void);
 int robot_destroy(robot_t *);
+int robot_add(robot_t *, robot_t *);
 int robot_set_id(robot_t *, int);
 int robot_set_status(robot_t *, bool);
 int robot_set_next(robot_t *, robot_t *);
@@ -72,6 +73,9 @@ int my_free_word_array(char **);
 size_t my_len_word_array(char **);
 char *my_strdup(char const *);
 size_t my_strlen(char const *);
+int my_getnbr(char const *);
+void my_put_nbr(int);
+void my_putchar(char);
 
 int get_user_input(void);
 int remove_comment(char *);
@@ -80,3 +84,6 @@ char **add_to_list(char *, char **);
 room_t *find_start(room_t *);
 bool visite_room(room_t *);
 int start_pathfinding(room_t *);
+
+int create_robot(char **);
+int set_linked_list_robot(int, robot_t *);
