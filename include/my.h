@@ -28,6 +28,8 @@ typedef struct room_s {
     room_type_t type;
     struct room_s **connected_rooms;
     struct room_s *next;
+    struct room_s *from;
+    struct room_s *to;
 } room_t;
 
 room_t *room_create(void);
@@ -37,6 +39,8 @@ int room_set_pos(room_t *, int, int);
 int room_set_resident(room_t *, bool);
 int room_set_visited(room_t *, bool);
 int room_set_next(room_t *, room_t *);
+int room_set_from(room_t *, room_t *);
+int room_set_to(room_t *, room_t *);
 int room_set_connected(room_t *, room_t **);
 int room_add_connection(room_t *, room_t *);
 int room_add(room_t *, room_t *);
@@ -76,6 +80,10 @@ void my_putchar(char);
 int get_user_input(void);
 int remove_comment(char *);
 char **add_to_list(char *, char **);
+
+room_t *find_start(room_t *);
+bool visite_room(room_t *);
+int start_pathfinding(room_t *);
 
 int create_robot(char **);
 int set_linked_list_robot(int, robot_t *);
