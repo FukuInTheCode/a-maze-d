@@ -21,6 +21,7 @@ typedef struct robot_s {
 
 robot_t *robot_create(void);
 int robot_destroy(robot_t *);
+int robot_add(robot_t *, robot_t *);
 int robot_set_id(robot_t *, int);
 int robot_set_status(robot_t *, bool);
 int robot_set_next(robot_t *, robot_t *);
@@ -41,4 +42,4 @@ int remove_comment(char *);
 char **add_to_list(char *, char **);
 
 int create_robot(char **);
-int display_nbr_robots(int);
+int set_linked_list_robot(int, robot_t *);
