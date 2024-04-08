@@ -21,6 +21,8 @@ int get_user_input(void)
     char **list = malloc(sizeof(char *));
     size_t size = 0;
 
+    if (list == NULL)
+        return 84;
     list[0] = NULL;
     while (true) {
         if (getline(&input, &size, stdin) == -1)
