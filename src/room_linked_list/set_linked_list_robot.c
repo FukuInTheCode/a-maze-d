@@ -16,9 +16,20 @@ int get_error(char **line)
     return 0;
 }
 
-int set_linked_list_room(char **line, room_t *head)
+int set_head(room_t **head)
+{
+    if (*head == NULL)
+        *head = room_create();
+    else
+        room_add(*head, room_create());
+
+    return 0;
+}
+
+int set_linked_list_room(char **line, room_t **head)
 {
     if (get_error(line) == 84)
         return 84;
+    set_head(head);
     return 0;
 }
