@@ -31,7 +31,7 @@ int get_user_input(void)
         if (get_size_input(input) != 0)
             list = add_to_list(input, list);
     }
-    if (create_robot(list) == 84)
+    if (create_robot(list) == 84 || create_room(list) == 84)
         return 84;
     return 0;
 }
