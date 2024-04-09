@@ -89,4 +89,4 @@ int create_robot(char **);
 int set_linked_list_robot(int, robot_t *);
 
 int create_room(char **);
-int set_linked_list_room(char **, room_t *);
+int set_linked_list_room(char **, room_t **);
