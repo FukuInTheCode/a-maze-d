@@ -57,6 +57,7 @@ typedef struct robot_s {
     int id;
     bool status;
     struct robot_s *next;
+    room_t *room;
 } robot_t;
 
 robot_t *robot_create(void);
@@ -87,3 +88,4 @@ int start_pathfinding(room_t *);
 
 int create_robot(char **);
 int set_linked_list_robot(int, robot_t *);
+int move_robots(robot_t *, room_t *);
