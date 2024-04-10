@@ -22,7 +22,7 @@ int get_error(char **line)
 
     if (len_line != 3)
         return 84;
-    if(!is_int(line[1]) || !is_int(line[2]))
+    if (!is_int(line[1]) || !is_int(line[2]))
         return 84;
     return 0;
 }
@@ -47,5 +47,7 @@ int set_linked_list_room(char **line, room_t **head)
     if (get_error(line) == 84)
         return 84;
     set_head(head, line);
+    if (get_if_same_name() == 84 || get_if_same_coord() == 84)
+        return 84;
     return 0;
 }
