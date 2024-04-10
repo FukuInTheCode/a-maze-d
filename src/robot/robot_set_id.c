@@ -6,6 +6,7 @@
 */
 
 #include "my.h"
+#include <stdio.h>
 
 int robot_set_id(robot_t *robot, int id)
 {

@@ -18,7 +18,8 @@ bool visite_room(room_t *room)
     for (size_t i = 0; room->connected_rooms[i]; i++) {
         if (room->connected_rooms[i]->visited)
             continue;
-        room_set_visited(room->connected_rooms[i], true);
+        if (room->connected_rooms[i]->type != END)
+            room_set_visited(room->connected_rooms[i], true);
         if (visite_room(room->connected_rooms[i])) {
             room_set_to(room, room->connected_rooms[i]);
             return true;

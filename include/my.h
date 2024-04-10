@@ -75,7 +75,7 @@ size_t my_len_word_array(char **);
 char *my_strdup(char const *);
 size_t my_strlen(char const *);
 int my_getnbr(char const *);
-void my_put_nbr(int);
+int my_put_nbr(int);
 void my_putchar(char);
 
 int get_user_input(void);
@@ -86,11 +86,11 @@ room_t *find_start(room_t *);
 bool visite_room(room_t *);
 int start_pathfinding(room_t *);
 
-int create_robot(char **);
+int create_robot(char **, robot_t **);
 int set_linked_list_robot(int, robot_t *);
 int set_connections(char **, robot_t *, room_t *);
 
-int create_room(char **);
+int create_room(char **, room_t **);
 int set_linked_list_room(char **, room_t **);
 int get_if_same_coord(room_t *);
 int get_if_same_name(room_t *);

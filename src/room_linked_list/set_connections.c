@@ -37,7 +37,10 @@ int set_connections(char **lines, robot_t *head_robots, room_t *head_rooms)
     for (; lines[i] && !is_tunnel(lines[i], head_rooms); i++);
     if (!lines[i])
         return 84;
+    write(1, "#tunnels\n", 9);
     for (; lines[i] && is_tunnel(lines[i], head_rooms); i++) {
+        write(1, lines[i], my_strlen(lines[i]));
+        write(1, "\n", 1);
         line = my_str_to_word_array(lines[i], "-");
         first = room_get(head_rooms, line[0]);
         sec = room_get(head_rooms, line[1]);

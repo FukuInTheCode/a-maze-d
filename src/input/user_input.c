@@ -15,6 +15,22 @@ static int get_size_input(char const *input)
     return len;
 }
 
+static int start_algo(char **list)
+{
+    robot_t *robots = NULL;
+    room_t *rooms = NULL;
+
+    if (create_robot(list, &robots) == 84 || create_room(list, &rooms) == 84)
+        return 84;
+    if (set_connections(list, robots, rooms) == 84)
+        return 84;
+    if (set_start_and_end(list, rooms) == 84)
+        return 84;
+    if (move_robots(robots, rooms) == 84)
+       return 84;
+    return 0;
+}
+
 int get_user_input(void)
 {
     char *input = NULL;
@@ -31,7 +47,5 @@ int get_user_input(void)
         if (get_size_input(input) != 0)
             list = add_to_list(input, list);
     }
-    if (create_robot(list) == 84 || create_room(list) == 84)
-        return 84;
-    return 0;
+    return start_algo(list);
 }

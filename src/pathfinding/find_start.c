@@ -10,7 +10,7 @@
 room_t *find_start(room_t *head)
 {
     for (; head; head = head->next)
-        if (head->type == END)
+        if (head->type == START)
             return head;
     return NULL;
 }
