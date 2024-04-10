@@ -94,3 +94,7 @@ int set_linked_list_room(char **, room_t **);
 int get_if_same_coord(room_t *);
 int get_if_same_name(room_t *);
 int move_robots(robot_t *, room_t *);
+
+int set_start_and_end(char **, room_t *);
+int set_end(char *, room_t *);
+int get_if_end(room_t *, char **, int, int *);
