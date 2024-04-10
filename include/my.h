@@ -89,3 +89,7 @@ int start_pathfinding(room_t *);
 int create_robot(char **);
 int set_linked_list_robot(int, robot_t *);
 int move_robots(robot_t *, room_t *);
+
+int set_start_and_end(char **, room_t *);
+int set_end(char *, room_t *);
+int get_if_end(room_t *, char **, int, int *);
