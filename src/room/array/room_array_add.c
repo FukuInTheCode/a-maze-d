@@ -17,7 +17,7 @@ static size_t find_len(room_t **arr)
 
 room_t **room_array_add(room_t **arr, room_t *room)
 {
-    room_t **new = malloc(sizeof(room_t *) * (find_len(arr) + 1));
+    room_t **new = malloc(sizeof(room_t *) * (find_len(arr) + 2));
     size_t i = 0;
 
     if (!new)

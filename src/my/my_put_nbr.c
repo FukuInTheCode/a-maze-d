@@ -7,7 +7,7 @@
 
 #include "my.h"
 
-void my_put_nbr(int nb)
+int my_put_nbr(int nb)
 {
     unsigned int count = nb;
 
@@ -20,4 +20,5 @@ void my_put_nbr(int nb)
         my_put_nbr(nb % 10);
     } else
         my_putchar(count + '0');
+    return 0;
 }

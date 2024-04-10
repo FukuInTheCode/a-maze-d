@@ -11,7 +11,6 @@ int robot_set_next(robot_t *robot, robot_t *next)
 {
     if (!next)
         return 0;
-    robot_set_id(next, robot->id);
     robot->next = next;
     return 0;
 }
