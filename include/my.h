@@ -88,4 +88,9 @@ int start_pathfinding(room_t *);
 
 int create_robot(char **);
 int set_linked_list_robot(int, robot_t *);
+
+int create_room(char **);
+int set_linked_list_room(char **, room_t **);
+int get_if_same_coord(room_t *);
+int get_if_same_name(room_t *);
 int move_robots(robot_t *, room_t *);
