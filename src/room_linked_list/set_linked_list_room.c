@@ -47,7 +47,7 @@ int set_linked_list_room(char **line, room_t **head)
     if (get_error(line) == 84)
         return 84;
     set_head(head, line);
-    if (get_if_same_name() == 84 || get_if_same_coord() == 84)
+    if (get_if_same_name(*head) == 84 || get_if_same_coord(*head) == 84)
         return 84;
     return 0;
 }
