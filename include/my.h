@@ -26,6 +26,7 @@ typedef struct room_s {
     bool has_resident;
     bool visited;
     room_type_t type;
+    size_t dist;
     struct room_s **connected_rooms;
     struct room_s *next;
     struct room_s *from;
@@ -82,8 +83,9 @@ int get_user_input(void);
 int remove_comment(char *);
 char **add_to_list(char *, char **);
 
-room_t *find_start(room_t *);
 bool visite_room(room_t *);
+room_t *find_start(room_t *);
+room_t *find_end(room_t *);
 int start_pathfinding(room_t *);
 
 int create_robot(char **, robot_t **);
@@ -99,3 +101,4 @@ int move_robots(robot_t *, room_t *);
 int set_start_and_end(char **, room_t *);
 int set_end(char *, room_t *);
 int get_if_end(room_t *, char **, int, int *);
+int do_opti(room_t *);
