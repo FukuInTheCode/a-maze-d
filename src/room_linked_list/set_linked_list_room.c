@@ -13,6 +13,7 @@ int get_error(char **line)
 
     if (len_line != 3)
         return 84;
+    printf("%s\n", line[0]);
     return 0;
 }
 
