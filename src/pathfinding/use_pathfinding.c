@@ -17,7 +17,7 @@ static int set_path(robot_t *r, room_t *start)
         if (!start->connected_rooms[_index_ + 1])
             _index_ = 0;
         else
-         _index_++;
+            _index_++;
     }
     if (!start->connected_rooms[_index_]->has_resident) {
         r->room = start->connected_rooms[_index_];
