@@ -27,7 +27,7 @@ static int start_algo(char **list)
     if (set_start_and_end(list, rooms) == 84)
         return 84;
     if (move_robots(robots, rooms) == 84)
-       return 84;
+        return 84;
     return 0;
 }
 
