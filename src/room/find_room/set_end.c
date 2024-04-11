@@ -26,6 +26,8 @@ int set_end(char *line, room_t *head)
     if (info_end == NULL)
         return 84;
     room_end = room_get(head, info_end[0]);
+    if (room_end == NULL)
+        return 84;
     room_end->type = END;
     return 0;
 }

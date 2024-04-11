@@ -15,6 +15,8 @@ int set_start(char *line, room_t *head)
     if (info_start == NULL)
         return 84;
     room_start = room_get(head, info_start[0]);
+    if (room_start == NULL)
+        return 84;
     room_start->type = START;
     return 0;
 }
