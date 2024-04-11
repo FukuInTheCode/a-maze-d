@@ -18,7 +18,9 @@ int start_pathfinding(room_t *head)
     room_set_visited(start, true);
     for (size_t i = 0; start->connected_rooms[i]; i++) {
         room_set_visited(start->connected_rooms[i], true);
-        ways += visite_room(start->connected_rooms[i]);
+        if (visite_room(start->connected_rooms[i])) {
+            ways++;
+        }
     }
     if (!ways)
         return 84;
