@@ -20,7 +20,7 @@ int get_if_same_name_loop(room_t *tmp, room_t *current)
 
 int get_if_same_name(room_t *head)
 {
-    room_t* current = head;
+    room_t *current = head;
     room_t *tmp = NULL;
 
     while (current != NULL) {
