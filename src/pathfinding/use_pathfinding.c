@@ -18,7 +18,7 @@ static int set_path(robot_t *r, room_t *start)
         if (!start->connected_rooms[_index_ + 1])
             _index_ = 0;
         else
-            _index_++;
+         _index_++;
     }
     if (!start->connected_rooms[_index_]->has_resident) {
         r->room = start->connected_rooms[_index_];
@@ -50,7 +50,7 @@ static bool do_move(robot_t *head, room_t *start)
             head->room = head->room->to;
         if (!head->room)
             continue;
-        room_set_resident(head->room, true);
+        head->room->type != END && room_set_resident(head->room, true);
         num != 1 && write(1, " ", 1);
         write(1, "P", 1);
         my_put_nbr(head->id + 1) || write(1, "-", 1);
