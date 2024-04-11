@@ -13,7 +13,8 @@ static int set_path(robot_t *r, room_t *start)
 
     if (!start->connected_rooms[_index_])
         _index_ = 0;
-    for (; !start->connected_rooms[_index_]->to;) {
+    for (; !start->connected_rooms[_index_]->to &&
+        start->connected_rooms[_index_]->type != END;) {
         if (!start->connected_rooms[_index_ + 1])
             _index_ = 0;
         else
