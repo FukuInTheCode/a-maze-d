@@ -23,7 +23,7 @@ int create_robot(char **lines, robot_t **head)
     if (nbr == 0)
         return 84;
     set_linked_list_robot(nbr, *head);
-    write(1, "#number_of_robots\n", 19);
+    write(1, "#number_of_robots\n", 18);
     my_put_nbr(nbr);
     write(1, "\n", 1);
     return 0;
