@@ -14,6 +14,7 @@ int start_pathfinding(room_t *head)
 
     if (!start || !start->connected_rooms || !*start->connected_rooms)
         return 84;
+    do_opti(head);
     room_set_visited(start, true);
     for (size_t i = 0; start->connected_rooms[i]; i++) {
         room_set_visited(start->connected_rooms[i], true);
